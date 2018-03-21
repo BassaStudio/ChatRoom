@@ -1,0 +1,8 @@
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\Server\bin\Debug\Server.exe.config
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\Server\bin\Debug\Server.exe
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\Server\bin\Debug\Server.pdb
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\Server\bin\Debug\SimpleTCP.dll
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\Server\obj\Debug\Server.exe
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\Server\obj\Debug\Server.pdb
