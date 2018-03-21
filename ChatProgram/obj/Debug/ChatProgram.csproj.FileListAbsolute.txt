@@ -1,0 +1,10 @@
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\bin\Debug\ChatProgram.exe.config
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\bin\Debug\ChatProgram.exe
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\bin\Debug\ChatProgram.pdb
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csprojResolveAssemblyReference.cache
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.Form1.resources
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.Properties.Resources.resources
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csproj.GenerateResource.Cache
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csproj.CoreCompileInputs.cache
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.exe
+C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.pdb
