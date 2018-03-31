@@ -8,3 +8,13 @@ C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatPro
 C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csproj.CoreCompileInputs.cache
 C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.exe
 C:\dev\project\_'MyProject\c#\ChatProgram\ChatRoom\ChatProgram\obj\Debug\ChatProgram.pdb
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\bin\Debug\ChatProgram.exe.config
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\bin\Debug\ChatProgram.exe
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\bin\Debug\ChatProgram.pdb
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csprojResolveAssemblyReference.cache
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.Form1.resources
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.Properties.Resources.resources
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csproj.GenerateResource.Cache
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csproj.CoreCompileInputs.cache
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.exe
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.pdb

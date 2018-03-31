@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SimpleTCP;
+using System.Threading;
 
 namespace Server
 {
@@ -14,17 +15,43 @@ namespace Server
         static string ipadress = "192.168.0.1";
         static int port = 8910;
 
+
         static void Main(string[] args)
         {
+            Thread c = new Thread(commandtest);
+          
             Console.WriteLine("IP: " + ipadress + ":" + port);
             sserver servers = new sserver(ipadress, port);
             sserver.begin();
-            while (sserver.IsRunning) {
 
-            };
+            c.Start();
+
+            while (sserver.IsRunning) {};
+
             sserver.end();
+            Console.ReadKey();
+        }
+
+        static void commandtest()
+        {
+            while (sserver.IsRunning)
+            {
+                Console.Write(">");
+                string command = Console.ReadLine();
+                switch(command)
+                {
+                    case "end":
+                        sserver.end();
+                        break;
+
+                    default:
+                        Console.WriteLine("This is not a command");
+                        break;
+                }
+            }
         }
     }
+
 
     class sserver
     {
@@ -60,6 +87,7 @@ namespace Server
         {
             if(serverf.IsStarted)
             {
+                Console.WriteLine("Server is stopping");
                 serverf.Stop();
             }
         }
