@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace ChatProgram
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        Chat Chat = new Chat();
+
+        public login()
         {
             InitializeComponent();
         }
@@ -20,6 +22,12 @@ namespace ChatProgram
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Chat.Show();
+            this.Hide();
         }
     }
 }
