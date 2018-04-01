@@ -47,6 +47,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ObooltNet">
+      <HintPath>..\..\..\..\..\..\dev\lib\ObooltNet-master\Source\ObooltNet\bin\Release\ObooltNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,7 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clintclass.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>

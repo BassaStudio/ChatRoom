@@ -29,27 +29,31 @@
         private void InitializeComponent()
         {
             this.logtxt = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.holdertxt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // logtxt
             // 
-            this.logtxt.Location = new System.Drawing.Point(3, 3);
+            this.logtxt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logtxt.Location = new System.Drawing.Point(0, 0);
             this.logtxt.Margin = new System.Windows.Forms.Padding(10);
             this.logtxt.Multiline = true;
             this.logtxt.Name = "logtxt";
             this.logtxt.ReadOnly = true;
-            this.logtxt.Size = new System.Drawing.Size(397, 276);
+            this.logtxt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.logtxt.Size = new System.Drawing.Size(403, 272);
             this.logtxt.TabIndex = 10;
             this.logtxt.TabStop = false;
             // 
-            // textBox2
+            // holdertxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(3, 284);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(338, 20);
-            this.textBox2.TabIndex = 0;
+            this.holdertxt.Location = new System.Drawing.Point(3, 284);
+            this.holdertxt.Name = "holdertxt";
+            this.holdertxt.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.holdertxt.Size = new System.Drawing.Size(338, 20);
+            this.holdertxt.TabIndex = 0;
+            this.holdertxt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.holdertxt_KeyUp);
             // 
             // button1
             // 
@@ -60,6 +64,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "send";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Chat
             // 
@@ -67,7 +72,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 309);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.holdertxt);
             this.Controls.Add(this.logtxt);
             this.Name = "Chat";
             this.Text = "Chat";
@@ -80,7 +85,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox logtxt;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox holdertxt;
         private System.Windows.Forms.Button button1;
     }
 }

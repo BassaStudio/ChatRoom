@@ -14,3 +14,5 @@ C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\obj\Debug\Server.csprojReso
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\obj\Debug\Server.exe
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\obj\Debug\Server.pdb
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\bin\Debug\ObooltNet.dll
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\bin\Debug\ObooltNet.pdb

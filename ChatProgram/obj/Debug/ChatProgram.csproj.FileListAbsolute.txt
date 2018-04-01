@@ -19,3 +19,5 @@ C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.pdb
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.Login.resources
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.Chat.resources
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\bin\Debug\ObooltNet.dll
+C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\bin\Debug\ObooltNet.pdb
