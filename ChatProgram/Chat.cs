@@ -18,6 +18,9 @@ namespace ChatProgram
         int m_port;
 
         NetConnection client;
+        NetConnection resiver;
+
+        static string[] dCom = new string[] { ":" };
 
         public Chat()
         {
@@ -32,29 +35,44 @@ namespace ChatProgram
 
             client = new NetConnection();
             client.OnConnect += Client_OnConnect;
-            client.OnDataReceived += Client_OnDataReceived;
             client.OnDisconnect += Client_OnDisconnect;
+
+            resiver = new NetConnection();
+            resiver.OnDataReceived += Resiver_OnDataReceived;
+
             try
             {
                 client.Connect(m_ipadress, m_port);
-            } catch
+            }
+            catch
             {
                 MessageBox.Show(m_ipadress + ":" + m_port + " has no server");
             }
         }
 
+        private void Resiver_OnDataReceived(object sender, NetConnection connection, byte[] e)
+        {
+            string text = "\n" + "message from server " + Encoding.UTF8.GetString(e);
+            logtxt.AppendText(text);
+        }
 
 
         private void Client_OnConnect(object sender, NetConnection connection)
         {
             string text = "Connect to " + connection.RemoteEndPoint.ToString() + "\n";
             logtxt.AppendText(text);
-        }
-
-        private void Client_OnDataReceived(object sender, NetConnection connection, byte[] e)
-        {
-            string text = "\n" + "message from server " + Encoding.UTF8.GetString(e);
-            logtxt.AppendText(text);
+            client.Send(Encoding.UTF8.GetBytes("C$gi" + "fl&" + m_name));
+            try
+            {
+                string host = sender.ToString();
+                MessageBox.Show(host);
+                string[] ips = host.Split(dCom, StringSplitOptions.None);
+                Int32.TryParse(ips[1], out int myPort);
+                resiver.Start(8081);
+            }catch
+            {
+                MessageBox.Show("Resiver is not work");
+            }
         }
 
         private void Client_OnDisconnect(object sender, NetConnection connection)

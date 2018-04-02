@@ -13,8 +13,12 @@ namespace Server
         static string ipadress = "192.168.1.2";
         static int port = 8080;
         static NetConnection server;
+        static List<user> users = new List<user>();
 
         static bool isRunning = true;
+
+        static string[] msgC = new string[] { "fl&" };
+        static string[] dCom = new string[] { ":" };
 
         static void Main(string[] args)
         {
@@ -42,17 +46,39 @@ namespace Server
 
         private static void Server_OnDataReceived(object sender, NetConnection connection, byte[] e)
         {
+            string msg = Encoding.UTF8.GetString(e);
+
+            string[] msga = msg.Split(msgC, StringSplitOptions.None);
+            if(msga[0] == "C$gi")
+            {
+                string host = connection.RemoteEndPoint.ToString();
+                string[] hosta = host.Split(dCom, StringSplitOptions.None);
+                Int32.TryParse(hosta[1], out int p);
+                users.Add(new user { name = msga[1], ip = hosta[0], port = p, c = new NetConnection() });
+                balog.Info(users[users.Count-1].name + "[" + users[users.Count-1].ip + ":" + users[users.Count-1].port + "] " + "is connect");
+                users[users.Count - 1].c.Connect(hosta[0], 8081);
+            } else
+            {
+                send(msg);
+            }
+
             balog.Info("Message from " + connection.RemoteEndPoint + " : " + Encoding.UTF8.GetString(e));
         }
 
         private static void Server_OnConnect(object sender, NetConnection connection)
         {
             balog.Info("Connect from " + connection.RemoteEndPoint.ToString());
+            
+
         }
 
-        private void send(string msg)
+        private static void send(string msg)
         {
 
+            foreach (var client in users)
+            {
+                client.c.Send(Encoding.UTF8.GetBytes(msg));
+            }
         }
 
         static void commandtest()
@@ -115,5 +141,14 @@ namespace Server
             Console.ResetColor();
             Console.Write("\r>");
         }
+    }
+
+    class user
+    {
+        public string name { get; set; }
+
+        public string ip { get; set; }
+        public int port { get; set; }
+        public NetConnection c { get; set; }
     }
 }
