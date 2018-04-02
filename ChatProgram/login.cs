@@ -22,9 +22,9 @@ namespace ChatProgram
         private void Form1_Load(object sender, EventArgs e)
         {
         //debug
-            nametxt.Text = "";
-            iptxt.Text = "";
-            porttxt.Text = "";
+            nametxt.Text = "bassa";
+            iptxt.Text = "localhost";
+            porttxt.Text = "8080";
         }
 
         private void button1_Click(object sender, EventArgs e)

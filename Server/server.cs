@@ -50,20 +50,37 @@ namespace Server
             balog.Info("Connect from " + connection.RemoteEndPoint.ToString());
         }
 
+        private void send(string msg)
+        {
+
+        }
+
         static void commandtest()
         {
             while (isRunning)
             {
                 string command = Console.ReadLine();
-                switch(command)
+                string[] stringSeparators = new string[] { " " };
+                string[] result = command.Split(stringSeparators, StringSplitOptions.None);
+
+                switch(result[0])
                 {
                     case "end":
                         isRunning = false;
                         balog.Info("Closing server");
                         break;
+                    case "send":
+                        string mess = "";
+                        for (int i = 1; i < result.Length; i++)
+                        {
+                            mess += result[i] + " ";
+                        }
+
+                        balog.Warn("You sendt: " + mess);
+                        break;
 
                     default:
-                        balog.Info("Thos is not a command");
+                        balog.Info("This is not a command");
                         break;
                 }
             }
