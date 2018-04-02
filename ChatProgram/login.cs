@@ -21,9 +21,10 @@ namespace ChatProgram
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            nametxt.Text = "bassa";
-            iptxt.Text = "192.168.1.2";
-            porttxt.Text = "8080";
+        //debug
+            nametxt.Text = "";
+            iptxt.Text = "";
+            porttxt.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
