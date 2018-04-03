@@ -55,6 +55,7 @@ namespace ChatProgram
             {
                 m_sender.Connect(m_ipadress, m_port);
                 m_resiver.Start(myportr);
+                connectToolStripMenuItem.Text = "Exit";
             }
             catch
             {
@@ -130,8 +131,13 @@ namespace ChatProgram
 
         private void connectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loginc = new login(this);
-            loginc.ShowDialog();
+            if (connectToolStripMenuItem.Text == "connect") {
+                loginc = new login(this);
+                loginc.ShowDialog();
+            } else if(connectToolStripMenuItem.Text == "Exit")
+            {
+                Application.Exit();
+            }
         }
     }
 }

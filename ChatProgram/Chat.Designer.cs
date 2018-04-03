@@ -41,7 +41,7 @@
             // 
             this.logtxt.Dock = System.Windows.Forms.DockStyle.Top;
             this.logtxt.Location = new System.Drawing.Point(0, 24);
-            this.logtxt.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.logtxt.Margin = new System.Windows.Forms.Padding(10);
             this.logtxt.Multiline = true;
             this.logtxt.Name = "logtxt";
             this.logtxt.ReadOnly = true;
@@ -91,7 +91,7 @@
             // connectToolStripMenuItem
             // 
             this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
-            this.connectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.connectToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.connectToolStripMenuItem.Text = "connect";
             this.connectToolStripMenuItem.Click += new System.EventHandler(this.connectToolStripMenuItem_Click);
             // 
@@ -104,6 +104,7 @@
             this.Controls.Add(this.holdertxt);
             this.Controls.Add(this.logtxt);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Chat";
             this.Text = "Chat";

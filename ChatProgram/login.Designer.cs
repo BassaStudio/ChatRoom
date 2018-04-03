@@ -44,7 +44,7 @@
             this.signbut.Name = "signbut";
             this.signbut.Size = new System.Drawing.Size(75, 23);
             this.signbut.TabIndex = 3;
-            this.signbut.Text = "Sign in";
+            this.signbut.Text = "Connect";
             this.signbut.UseVisualStyleBackColor = true;
             this.signbut.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -113,6 +113,7 @@
             this.Controls.Add(this.iptxt);
             this.Controls.Add(this.nametxt);
             this.Controls.Add(this.signbut);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "login";
             this.Text = "Login";
