@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using ObooltNet;
 
+
 namespace Server
 {
     class Program
@@ -95,9 +96,7 @@ namespace Server
 
         private static void Server_OnConnect(object sender, NetConnection connection)
         {
-            balog.Info("Connect from " + connection.RemoteEndPoint.ToString());
-            
-
+            balog.Info("Connect from " + connection.RemoteEndPoint.ToString());  
         }
 
         private static void send(string from , string msg)
@@ -141,8 +140,16 @@ namespace Server
                         }
                         break;
 
+                    case "help":
+                        balog.Info("Commands");
+                        balog.Info("------------");
+                        balog.Info("end - ends the server");
+                        balog.Info("send [message] - send a messeage from the server");
+                        balog.Info("online - shows how is online");
+                        break;
+
                     default:
-                        balog.Info("This is not a command");
+                        balog.Info("This is not a command, use help to show all commands");
                         break;
                 }
             }
@@ -156,7 +163,7 @@ namespace Server
             Console.ForegroundColor = ConsoleColor.White;
             string mes = "\r[Info] " + txt;
             Console.WriteLine(mes);
-            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("\r>");
         }
 
@@ -165,7 +172,7 @@ namespace Server
             Console.ForegroundColor = ConsoleColor.Yellow;
             string mes = "\r[Warn] " + txt;
             Console.WriteLine(mes);
-            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("\r>");
         }
 
@@ -174,7 +181,7 @@ namespace Server
             Console.ForegroundColor = ConsoleColor.Red;
             string mes = "\r[Error] " + txt;
             Console.WriteLine(mes);
-            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("\r>");
         }
     }
