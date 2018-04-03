@@ -17,8 +17,8 @@ namespace ChatProgram
         string m_ipadress;
         int m_port;
 
-        NetConnection client;
-        NetConnection resiver;
+        NetConnection m_sender;
+        NetConnection m_resiver;
 
         static string[] dCom = new string[] { ":" };
 
@@ -27,22 +27,31 @@ namespace ChatProgram
             InitializeComponent();
         }
 
+        int myportr = 8081;
+
         public void startup(string name, string ipadress, int port)
         {
             m_name = name;
             m_ipadress = ipadress;
             m_port = port;
 
-            client = new NetConnection();
-            client.OnConnect += Client_OnConnect;
-            client.OnDisconnect += Client_OnDisconnect;
+            this.Text = "Chat" + " : " + m_name; 
 
-            resiver = new NetConnection();
-            resiver.OnDataReceived += Resiver_OnDataReceived;
+
+            m_sender = new NetConnection();
+            m_sender.OnConnect += Client_OnConnect;
+            m_sender.OnDisconnect += Client_OnDisconnect;
+
+            m_resiver = new NetConnection();
+            m_resiver.OnDataReceived += Resiver_OnDataReceived;
+
+            Random r = new Random();
+            myportr = r.Next(8000, 10000);
 
             try
             {
-                client.Connect(m_ipadress, m_port);
+                m_sender.Connect(m_ipadress, m_port);
+                m_resiver.Start(myportr);
             }
             catch
             {
@@ -52,7 +61,7 @@ namespace ChatProgram
 
         private void Resiver_OnDataReceived(object sender, NetConnection connection, byte[] e)
         {
-            string text = "\n" + "message from server " + Encoding.UTF8.GetString(e);
+            string text = Encoding.UTF8.GetString(e) + "\n";
             logtxt.AppendText(text);
         }
 
@@ -61,18 +70,7 @@ namespace ChatProgram
         {
             string text = "Connect to " + connection.RemoteEndPoint.ToString() + "\n";
             logtxt.AppendText(text);
-            client.Send(Encoding.UTF8.GetBytes("C$gi" + "fl&" + m_name));
-            try
-            {
-                string host = sender.ToString();
-                MessageBox.Show(host);
-                string[] ips = host.Split(dCom, StringSplitOptions.None);
-                Int32.TryParse(ips[1], out int myPort);
-                resiver.Start(8081);
-            }catch
-            {
-                MessageBox.Show("Resiver is not work");
-            }
+            this.m_sender.Send(Encoding.UTF8.GetBytes("C$gi" + "fl&" + m_name + "fl&" + myportr.ToString()));
         }
 
         private void Client_OnDisconnect(object sender, NetConnection connection)
@@ -90,7 +88,7 @@ namespace ChatProgram
         {
             try
             {
-                client.Send(Encoding.UTF8.GetBytes(Message));
+                m_sender.Send(Encoding.UTF8.GetBytes(Message));
                 holdertxt.Text = "";
 
             }

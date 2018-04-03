@@ -37,30 +37,32 @@
             // 
             this.logtxt.Dock = System.Windows.Forms.DockStyle.Top;
             this.logtxt.Location = new System.Drawing.Point(0, 0);
-            this.logtxt.Margin = new System.Windows.Forms.Padding(10);
+            this.logtxt.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.logtxt.Multiline = true;
             this.logtxt.Name = "logtxt";
             this.logtxt.ReadOnly = true;
             this.logtxt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.logtxt.Size = new System.Drawing.Size(403, 272);
+            this.logtxt.Size = new System.Drawing.Size(537, 334);
             this.logtxt.TabIndex = 10;
             this.logtxt.TabStop = false;
             // 
             // holdertxt
             // 
-            this.holdertxt.Location = new System.Drawing.Point(3, 284);
+            this.holdertxt.Location = new System.Drawing.Point(4, 350);
+            this.holdertxt.Margin = new System.Windows.Forms.Padding(4);
             this.holdertxt.Name = "holdertxt";
             this.holdertxt.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.holdertxt.Size = new System.Drawing.Size(338, 20);
+            this.holdertxt.Size = new System.Drawing.Size(449, 22);
             this.holdertxt.TabIndex = 0;
             this.holdertxt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.holdertxt_KeyUp);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(345, 282);
+            this.button1.Location = new System.Drawing.Point(460, 347);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 23);
+            this.button1.Size = new System.Drawing.Size(73, 28);
             this.button1.TabIndex = 1;
             this.button1.Text = "send";
             this.button1.UseVisualStyleBackColor = true;
@@ -68,12 +70,13 @@
             // 
             // Chat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 309);
+            this.ClientSize = new System.Drawing.Size(537, 380);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.holdertxt);
             this.Controls.Add(this.logtxt);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Chat";
             this.Text = "Chat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Chat_FormClosing);

@@ -16,3 +16,13 @@ C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\obj\Debug\Server.exe
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\obj\Debug\Server.pdb
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\bin\Debug\ObooltNet.dll
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\Server\bin\Debug\ObooltNet.pdb
+D:\github\ChatRoom\Server\bin\Debug\Server.exe.config
+D:\github\ChatRoom\Server\bin\Debug\Server.exe
+D:\github\ChatRoom\Server\bin\Debug\Server.pdb
+D:\github\ChatRoom\Server\bin\Debug\ObooltNet.dll
+D:\github\ChatRoom\Server\bin\Debug\SimpleTCP.dll
+D:\github\ChatRoom\Server\bin\Debug\ObooltNet.pdb
+D:\github\ChatRoom\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\github\ChatRoom\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\github\ChatRoom\Server\obj\Debug\Server.exe
+D:\github\ChatRoom\Server\obj\Debug\Server.pdb

@@ -30,8 +30,9 @@ namespace ChatProgram
         private void button1_Click(object sender, EventArgs e)
         {
             Chat.startup(nametxt.Text, iptxt.Text, Convert.ToInt32(porttxt.Text));
-            Chat.Show();
+            Chat.ShowDialog();
             this.Hide();
+            while(!Chat.ShowInTaskbar) { this.Show(); }
         }
     }
 }

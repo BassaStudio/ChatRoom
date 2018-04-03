@@ -21,3 +21,16 @@ C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\obj\Debug\ChatProgram.Chat.resources
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\bin\Debug\ObooltNet.dll
 C:\Users\BassaGamer\Documents\GitHub\ChatRoom\ChatProgram\bin\Debug\ObooltNet.pdb
+D:\github\ChatRoom\ChatProgram\bin\Debug\ChatProgram.exe.config
+D:\github\ChatRoom\ChatProgram\bin\Debug\ChatProgram.exe
+D:\github\ChatRoom\ChatProgram\bin\Debug\ChatProgram.pdb
+D:\github\ChatRoom\ChatProgram\bin\Debug\ObooltNet.dll
+D:\github\ChatRoom\ChatProgram\bin\Debug\ObooltNet.pdb
+D:\github\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csprojResolveAssemblyReference.cache
+D:\github\ChatRoom\ChatProgram\obj\Debug\ChatProgram.login.resources
+D:\github\ChatRoom\ChatProgram\obj\Debug\ChatProgram.Chat.resources
+D:\github\ChatRoom\ChatProgram\obj\Debug\ChatProgram.Properties.Resources.resources
+D:\github\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csproj.GenerateResource.Cache
+D:\github\ChatRoom\ChatProgram\obj\Debug\ChatProgram.csproj.CoreCompileInputs.cache
+D:\github\ChatRoom\ChatProgram\obj\Debug\ChatProgram.exe
+D:\github\ChatRoom\ChatProgram\obj\Debug\ChatProgram.pdb
