@@ -20,6 +20,8 @@ namespace ChatProgram
         NetConnection m_sender;
         NetConnection m_resiver;
 
+        login loginc;
+
         static string[] dCom = new string[] { ":" };
 
         public Chat()
@@ -31,6 +33,7 @@ namespace ChatProgram
 
         public void startup(string name, string ipadress, int port)
         {
+
             m_name = name;
             m_ipadress = ipadress;
             m_port = port;
@@ -123,6 +126,12 @@ namespace ChatProgram
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void connectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loginc = new login(this);
+            loginc.ShowDialog();
         }
     }
 }

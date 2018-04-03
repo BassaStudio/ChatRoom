@@ -33,8 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.iptxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.porttxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.numtxt = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numtxt)).BeginInit();
             this.SuspendLayout();
             // 
             // signbut
@@ -79,13 +80,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Ip:";
             // 
-            // porttxt
-            // 
-            this.porttxt.Location = new System.Drawing.Point(45, 55);
-            this.porttxt.Name = "porttxt";
-            this.porttxt.Size = new System.Drawing.Size(153, 20);
-            this.porttxt.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -95,22 +89,35 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Port";
             // 
+            // numtxt
+            // 
+            this.numtxt.Location = new System.Drawing.Point(45, 56);
+            this.numtxt.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numtxt.Name = "numtxt";
+            this.numtxt.Size = new System.Drawing.Size(153, 20);
+            this.numtxt.TabIndex = 2;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(204, 113);
+            this.Controls.Add(this.numtxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.porttxt);
             this.Controls.Add(this.iptxt);
             this.Controls.Add(this.nametxt);
             this.Controls.Add(this.signbut);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numtxt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,8 +130,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox iptxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox porttxt;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numtxt;
     }
 }
 

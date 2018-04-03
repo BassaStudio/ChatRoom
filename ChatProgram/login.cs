@@ -12,11 +12,12 @@ namespace ChatProgram
 {
     public partial class login : Form
     {
-        Chat Chat = new Chat();
+        Chat m_chat;
 
-        public login()
+        public login(Chat chat)
         {
             InitializeComponent();
+            m_chat = chat;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -24,15 +25,17 @@ namespace ChatProgram
         //debug
             nametxt.Text = "bassa";
             iptxt.Text = "localhost";
-            porttxt.Text = "8080";
+            numtxt.Value = 8080;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Chat.startup(nametxt.Text, iptxt.Text, Convert.ToInt32(porttxt.Text));
-            Chat.ShowDialog();
-            this.Hide();
-            while(!Chat.ShowInTaskbar) { this.Show(); }
+            Int32.TryParse(numtxt.Value.ToString(), out int port);
+            m_chat.startup(nametxt.Text, iptxt.Text, port);
+            this.Close();
+        
         }
+
+       
     }
 }
