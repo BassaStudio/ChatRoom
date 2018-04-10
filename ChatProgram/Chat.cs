@@ -59,7 +59,7 @@ namespace ChatProgram
             }
             catch
             {
-                MessageBox.Show(m_ipadress + ":" + m_port + " has no server");
+                MessageBox.Show("can't find the server");
             }
         }
 
